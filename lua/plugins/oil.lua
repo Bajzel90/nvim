@@ -18,8 +18,6 @@ return {
           opts = { vertical = true },
           desc = "Open the entry in a vertical split",
         },
-        ["l"] = { "actions.select" },
-        ["h"] = { "actions.parent" },
         ["<C-p>"] = "actions.preview",
         ["q"] = "actions.close",
         ["<C-r>"] = "actions.refresh",

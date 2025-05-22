@@ -4,7 +4,10 @@
 
 vim.g.snacks_animate = false
 
+vim.opt.spelllang = { "en", "pl" }
+
 vim.diagnostic.config({
+
   float = { border = "rounded" },
 })
 
