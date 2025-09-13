@@ -23,6 +23,7 @@ return {
       zen = {
         minimal = true,
         width = 100,
+        backdrop = { transparent = false },
       },
     },
     bufdelete = { enabled = true },
@@ -44,7 +45,19 @@ return {
         },
       },
     },
-    zen = { enabled = true },
+    zen = {
+      toggles = {
+        dim = false,
+        git_signs = false,
+        mini_diff_signs = false,
+        diagnostics = false,
+        inlay_hints = false,
+      },
+      show = {
+        statusline = false, -- can only be shown when using the global statusline
+        tabline = false,
+      },
+    },
   },
 
 -- stylua: ignore

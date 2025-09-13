@@ -1,0 +1,137 @@
+-- return {
+--   "thesimonho/kanagawa-paper.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     vim.cmd.colorscheme("kanagawa-paper")
+--   end,
+-- }
+
+return {
+  "rebelot/kanagawa.nvim",
+  lazy = false,
+  priority = 1000,
+  config = function()
+    vim.cmd.colorscheme("kanagawa")
+  end,
+}
+
+-- return {
+--   "stevedylandev/darkmatter-nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("darkmatter-colorscheme").setup(_, {
+--       transparent = true,
+--     })
+--
+--     vim.cmd("colorscheme darkmatter")
+--   end,
+-- }
+
+-- return {
+--   "webhooked/kanso.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     vim.cmd("colorscheme kanso")
+--   end,
+-- }
+--
+-- return {
+--   lazy = false,
+--   priority = 1000,
+--   "vague2k/vague.nvim",
+--   config = function()
+--     vim.cmd("colorscheme vague")
+--   end,
+-- }
+
+-- return {
+--   "rose-pine/neovim",
+--   name = "rose-pine",
+--   config = function()
+--     require("rose-pine").setup({
+--       styles = {
+--         bold = true,
+--         italic = true,
+--         transparency = true,
+--       },
+--     })
+--     vim.cmd("colorscheme rose-pine")
+--   end,
+-- }
+
+--
+-- return {
+--   {
+--     "LazyVim/LazyVim",
+--     opts = {
+--       colorscheme = function()
+--         require("catppuccin").load()
+--       end,
+--     },
+--   },
+--   {
+--     "catppuccin/nvim",
+--     name = "catppuccin",
+--     priority = 1000,
+--     opts = {
+--       no_italic = false,
+--       term_colors = true,
+--       transparent_background = true,
+--       -- styles = {
+--       --   comments = { "italic" },
+--       --   conditionals = {},
+--       --   loops = {},
+--       --   functions = {},
+--       --   keywords = { "italic" },
+--       --   strings = {},
+--       --   variables = {},
+--       --   numbers = {},
+--       --   booleans = {},
+--       --   properties = {},
+--       --   types = {},
+--       -- },
+--       color_overrides = {
+--         --   all = {
+--         --     text = "#ffffff",
+--         --     blue = "#ffffff",
+--         --   },
+--         mocha = {
+--           base = "#121113",
+--           mantle = "#121113",
+--           crust = "#121113",
+--           --     mauve = "#ffffff",
+--           --     blue = "#ffffff",
+--           --     maroon = "#F7D8BA",
+--           --     yellow = "#ffffff",
+--         },
+--       },
+--       -- custom_highlights = {
+--       --   Comment = { fg = "#9d9d9d", style = { "italic" } },
+--       --   Function = { fg = "#c0c0c0", style = { "bold" } },
+--       --   Keyword = { fg = "#503b2d", style = { "italic" } },
+--       --   String = { fg = "#3c2b21" },
+--       --   Type = { fg = "#3d3d3d", style = { "bold" } },
+--       --   Constant = { fg = "#2e3031" },
+--       --   Identifier = { fg = "#242525" },
+--       --   Statement = { fg = "#514f4d" },
+--       --   Visual = { bg = "#1b1a1b" },
+--       --   CursorLine = { bg = "#111113" },
+--       --   LineNr = { fg = "#9d9d9d" },
+--       --   VertSplit = { fg = "#3d3d3d" },
+--       -- },
+--       integrations = {
+--         telescope = {
+--           enabled = true,
+--           style = "nvchad",
+--         },
+--         dropbar = {
+--           enabled = true,
+--           color_mode = true,
+--         },
+--       },
+--     },
+--   },
+-- }

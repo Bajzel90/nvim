@@ -35,11 +35,10 @@ return {
     opts = {},
   },
   {
-    "MeanderingProgrammer/markdown.nvim",
+    "MeanderingProgrammer/render-markdown.nvim",
     ft = "markdown", -- or 'event = "VeryLazy"'
     name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
     dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
-    main = "render-markdown",
     opts = {
       code = {
         width = "block",
