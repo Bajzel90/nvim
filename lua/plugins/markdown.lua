@@ -43,6 +43,8 @@ return {
       code = {
         width = "block",
         right_pad = 1,
+        conceal_delimiters = false,
+        border = "none",
       },
       heading = {
         sign = false,

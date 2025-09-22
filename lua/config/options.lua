@@ -17,3 +17,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     vim.api.nvim_set_hl(0, "SignColumn", { fg = "#909090", bg = "none" })
   end,
 })
+
+vim.g.OmniSharp_server_use_mono = 1

@@ -8,7 +8,7 @@ return {
         -- Pobierz nazwę aktualnego pliku bez rozszerzenia
         local filename = vim.fn.expand("%:t:r")
         -- Zbuduj ścieżkę: .image/nazwa-pliku
-        return ".img/" .. filename
+        return "img/" .. filename
       end,
       relative_to_current_file = true,
       show_dir_path_in_prompt = true,
