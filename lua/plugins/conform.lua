@@ -6,13 +6,47 @@ return {
       cs = { "csharpier" },
       xml = { "xmlformatter" },
       sql = { "sqlfmt" },
+      ps1 = { "pwsh_formatter" },
+      psm1 = { "pwsh_formatter" },
     },
 
-    default_format_opts = {
-      timeout_ms = 60000,
-      async = false, -- not recommended to change
-      quiet = false, -- not recommended to change
-      lsp_format = "fallback", -- not recommended to change
+    formatters = {
+      pwsh_formatter = {
+        command = "pwsh",
+        args = {
+          "-NoProfile",
+          "-Command",
+          [[
+            $settings = @{
+              IncludeRules = @(
+                "PSUseConsistentIndentation",
+                "PSPlaceOpenBrace",
+                "PSAlignAssignmentStatement",
+                "PSUseConsistentWhitespace"
+              )
+              Rules = @{
+                PSUseConsistentIndentation = @{
+                  Enable = $true
+                  IndentationSize = 4
+                }
+                PSPlaceOpenBrace = @{
+                  Enable = $true
+                  OnSameLine = $true
+                }
+                PSAlignAssignmentStatement = @{
+                  Enable = $true
+                }
+                PSUseConsistentWhitespace = @{
+                  Enable = $true
+                  MaxLineLength = 100
+                }
+              }
+            }
+    Invoke-Formatter -ScriptDefinition ([Console]::In.ReadToEnd()) -Settings $settings
+  ]],
+        },
+        stdin = true,
+      },
     },
   },
 }
