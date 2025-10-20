@@ -20,11 +20,6 @@ return {
         relative = "editor",
         col = -1,
       },
-      zen = {
-        minimal = true,
-        width = 100,
-        backdrop = { transparent = false },
-      },
     },
     bufdelete = { enabled = true },
     git = { enabled = true },
@@ -45,34 +40,19 @@ return {
         },
       },
     },
-    zen = {
-      toggles = {
-        dim = false,
-        git_signs = false,
-        mini_diff_signs = false,
-        diagnostics = false,
-        inlay_hints = false,
-      },
-      show = {
-        statusline = false, -- can only be shown when using the global statusline
-        tabline = false,
-      },
-    },
+    zen = { enabled = false },
   },
 
 -- stylua: ignore
 	keys = function ()
 	return {
 		{ "<leader>gg", function() Snacks.lazygit.open() end, desc = "Lazygit" },
-		{ "<leader>D", function() Snacks.dashboard.open() end, desc = "Open Dashboard" },
-		{ "<leader>tt", function() Snacks.terminal() end, desc = "Toggle terminal" },
 
         -- Top Pickers & Explorer
-    { "<leader><space>", function() Snacks.picker.files() end, desc = "Smart Find Files" },
+    { "<leader><space>", function() Snacks.picker.files() end, desc = "Find files" },
     { "<leader>fb", function() Snacks.picker.buffers() end, desc = "Buffers" },
     { "<leader>.", function() Snacks.picker.recent() end, desc = "Recent" },
     { "<leader>/", function() Snacks.picker.grep() end, desc = "Grep" },
-    { "<leader>:", function() Snacks.picker.command_history() end, desc = "Command History" },
     { "<leader>n", function() Snacks.picker.notifications() end, desc = "Notification History" },
 
     -- find
@@ -81,15 +61,12 @@ return {
     { "<leader>fw", function() Snacks.picker.grep_word() end, desc = "Visual selection or word", mode = { "n", "x" } },
 
     -- git
-    { "<leader>gB", function() Snacks.picker.git_branches() end, desc = "Git Branches" },
     { "<leader>gb", function() Snacks.git.blame_line() end, desc = "Git Blame" },
     { "<leader>gl", function() Snacks.picker.git_log() end, desc = "Git Log" },
     { "<leader>gs", function() Snacks.picker.git_status() end, desc = "Git Status" },
-    { "<leader>gS", function() Snacks.picker.git_stash() end, desc = "Git Stash" },
     { "<leader>gd", function() Snacks.picker.git_diff() end, desc = "Git Diff (Hunks)" },
 
     -- search
-    { '<leader>s/', function() Snacks.picker.search_history() end, desc = "Search History" },
     { "<leader>sb", function() Snacks.picker.lines() end, desc = "Buffer Lines" },
     { "<leader>sd", function() Snacks.picker.diagnostics() end, desc = "Diagnostics" },
     { "<leader>sD", function() Snacks.picker.diagnostics_buffer() end, desc = "Buffer Diagnostics" },
@@ -98,7 +75,6 @@ return {
     { "<leader>sk", function() Snacks.picker.keymaps() end, desc = "Keymaps" },
     { "<leader>sq", function() Snacks.picker.qflist() end, desc = "Quickfix List" },
     { "<leader>su", function() Snacks.picker.undo() end, desc = "Undo History" },
-    { "<leader>uC", function() Snacks.picker.colorschemes() end, desc = "Colorschemes" },
 
     -- Buffer
     { "<leader>bD", function() Snacks.bufdelete.other() end, desc = "Buff Delete others" },
@@ -109,12 +85,8 @@ return {
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
     { "gD", function() Snacks.picker.lsp_declarations() end, desc = "Goto Declaration" },
     { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
-    { "gI", function() Snacks.picker.lsp_implementations() end, desc = "Goto Implementation" },
-    { "gy", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto T[y]pe Definition" },
     { "<leader>ss", function() Snacks.picker.lsp_symbols() end, desc = "LSP Symbols" },
     { "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, desc = "LSP Workspace Symbols" },
-
-    { "<leader>z",  function() Snacks.zen() end, desc = "Toggle Zen Mode" },
   }
 	end,
 }

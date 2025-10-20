@@ -6,8 +6,8 @@ return {
       cs = { "csharpier" },
       xml = { "xmlformatter" },
       sql = { "sqlfmt" },
-      ps1 = { "pwsh_formatter" },
-      psm1 = { "pwsh_formatter" },
+      -- ps1 = { "pwsh_formatter" },
+      -- psm1 = { "pwsh_formatter" },
     },
 
     formatters = {
